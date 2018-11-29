@@ -1,33 +1,29 @@
 const express = require('express');
-const path = require('path');
-const config = require('./config');
+import connectionDB from './database';
+import clientRoute from './routes/client';
 
 const app = express();
 
 // Обработка запросов
-app.get('/', (req, res) => {
-    const menu = [{
-        id: '1',
-        name: 'Главная'
-    }, {
-        id: '2',
-        name: 'Каталог'
-    }]
-    res.send("API ROOT");
-})
+app.use('/client', clientRoute);
+//app.use("/dashboard", dashBoardRoute);
 
-app.get('/menu', (req, res) => {
-    const menu = [{
-        id: '1',
-        name: 'Главная'
-    }, {
-        id: '2',
-        name: 'Каталог'
-    }]
-    res.send(menu, 200);
-})
+// Синхронизация с БД
+connectionDB.sync({
+    logging: console.log
+});
+
+// Подключение к БД
+connectionDB
+    .authenticate()
+        .then(() => {
+            console.log('Connection has been established successfully.');
+        })
+        .catch(err => {
+            console.error('Unable to connect to the database:', err);
+        });
 
 module.exports = {
-    path: "/api",
+    path   : '/api',
     handler: app
 }

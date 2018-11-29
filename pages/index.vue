@@ -10,7 +10,7 @@
 
 export default {
 	asyncData({app}) {
-		return app.$axios.$get('/api/menu')
+		return app.$axios.$get('/api/client/menu')
 			.then((res) => {
 				return { menu: res }
 			})

@@ -37,8 +37,10 @@ module.exports = {
 			}
 		}
 	},
+
 	modules: [
 		'@nuxtjs/axios',
 	],
+	watch: ['server/**/*.js'],
 	serverMiddleware: ['~/server/index.js']
 };
