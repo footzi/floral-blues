@@ -7,13 +7,12 @@
 </template>
 
 <script>
-import axios from '@/plugins/axios';
 
 export default {
-	asyncData() {
-		return axios.get('/api/menu')
+	asyncData({app}) {
+		return app.$axios.$get('/api/menu')
 			.then((res) => {
-				return { menu: res.data }
+				return { menu: res }
 			})
 	}
 }
