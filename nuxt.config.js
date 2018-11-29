@@ -23,6 +23,9 @@ module.exports = {
 	 ** Build configuration
 	 */
 	build: {
+		styleResources: {
+			scss: './assets/app.scss'
+		},
 		/*
 		 ** Run ESLint on save
 		 */

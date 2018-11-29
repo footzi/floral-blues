@@ -1,17 +1,24 @@
 <template>
-	<section class="container">
-		<ul v-for="item in menu" :key="item.id">
+	<div class="Index">
+		<Header />
+		<!-- <ul v-for="item in menu" :key="item.id">
 			<li>{{item.name}}</li>
-		</ul>
-	</section>
+		</ul> -->
+	</div>
 </template>
 
 <script>
+import Header from '../components/Header/Header';
 
 export default {
+	components: {
+		Header
+	},
+
 	asyncData({app}) {
-		return app.$axios.$get('/api/client/menu')
+		return app.$axios.$get('./stub.json')
 			.then((res) => {
+                console.log(res);
 				return { menu: res }
 			})
 	}
