@@ -1,22 +1,19 @@
 <template>
 	<section class="container">
-		<h1>Home page</h1>
+		<ul v-for="item in menu" :key="item.id">
+			<li>{{item.name}}</li>
+		</ul>
 	</section>
 </template>
 
 <script>
-import axios from 'axios';
+import axios from '@/plugins/axios';
 
 export default {
-	data() {
-		return {
-			menu: ''
-		}
-	},
 	asyncData() {
-		axios.get('/api/menu')
+		return axios.get('/api/menu')
 			.then((res) => {
-				console.log(res);
+				return { menu: res.data }
 			})
 	}
 }
