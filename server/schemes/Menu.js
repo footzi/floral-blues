@@ -1,7 +1,7 @@
-import Sequelize from "sequelize";
-import connectionDB from "../database";
+import Sequelize from 'sequelize';
+import connectionDB from '../database';
 
-const MenuScheme = connectionDB.define("menu", {
+export default connectionDB.define('menu', {
     id: {
         type: Sequelize.INTEGER,
         primaryKey: true,
@@ -11,5 +11,3 @@ const MenuScheme = connectionDB.define("menu", {
     name: Sequelize.STRING,
     href: Sequelize.STRING
 });
-
-export default MenuScheme;

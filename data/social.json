@@ -1,0 +1,23 @@
+{
+    "data": [{
+        "id": "1",
+        "name": "Вконтакте",
+        "href": "vk.com",
+        "image": "/upload/vk.png"
+    },{
+        "id": "2",
+        "name": "Instagram",
+        "href": "instargam.com",
+        "image": "/upload/inst.png"
+    },{
+        "id": "3",
+        "name": "Facebook",
+        "href": "facebook.com",
+        "image": "/upload/fb.png"
+    },{
+        "id": "Yarmarka",
+        "href": "yarmarka.com",
+        "name": "Ярмарка мастеров",
+        "image": "/upload/ym.png"
+    }]
+}

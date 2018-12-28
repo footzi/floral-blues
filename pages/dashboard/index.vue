@@ -1,12 +1,13 @@
 <template>
-	<div>
-		<h1>Dashboard</h1>
+	<div class="container">
+		<!-- <Menu /> -->
 	</div>
 </template>
 
 <script>
-
-export default {
-	layout: 'dashboard'
-}
+// import Menu from '../../components/Dashboard/Menu';
+// export default {
+//     layout    : 'dashboard',
+//     components: {Menu}
+// };
 </script>

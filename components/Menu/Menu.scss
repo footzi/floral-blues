@@ -1,0 +1,21 @@
+.Menu-List {
+    display: flex;
+    justify-content: space-between;
+}
+
+.Menu-Link {
+    @include transition(color);
+    @include reset-link;
+    font-size: 18px;
+    color: $black;
+
+    @media #{$laptop} {
+        &:hover {
+            color: $accent;
+        }
+    }
+
+    @media #{$fullhd} {
+        font-size: 25px;
+    }
+}
