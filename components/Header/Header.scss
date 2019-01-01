@@ -1,0 +1,62 @@
+.Header {
+    margin-top: 10px;
+    position: relative;
+
+    @media #{$tablet-portrait} {
+        margin-top: 15px;
+    }
+
+    @media #{$tablet-landscape} {
+        margin-top: 20px;
+    }
+
+    @media #{$laptop} {
+        margin-top: 35px;
+    }
+
+    @media #{$fullhd} {
+        margin-top: 50px;
+    }
+}
+
+.Header-Social {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.Header-Logo {
+    text-align: center;
+}
+
+.Header-Content {
+    @media #{$laptop} {
+        margin-top: 30px;
+        position: relative;
+    }
+}
+
+.Header-Menu {
+    display: none;
+
+    @media #{$laptop} {
+        @include suffix(5, 32);
+        @include prefix(5, 32);
+        width: 100%;
+        display: block;
+    }
+}
+
+.Header-PreviewSales {
+    position: absolute;
+    top: 0;
+    right: 5px;
+
+    @media #{$laptop} {
+        top: -10px;
+    }
+}
+
+.Header-Banner {
+    margin-top: 20px;
+}

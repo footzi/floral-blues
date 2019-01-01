@@ -1,10 +1,8 @@
 import MenuScheme from '../schemes/Menu';
 
-class MenuModel {
+export default {
     async getAllElements() {
         return await MenuScheme.findAll({ raw: true })
             .then(elements => elements)
     }
-}
-
-export default MenuModel;
+};

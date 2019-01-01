@@ -1,0 +1,26 @@
+<template>
+    <div class="Menu">
+        <ul class="Menu-List">
+            <li class="Menu-Item" v-for="item in data.menu.data" :key="item.id">
+                <template v-if="item.child">
+                    <Accordion :props="item"/>
+                </template>
+                <nuxt-link v-else class="Menu-Link" :to=item.href>{{item.name}}</nuxt-link>
+            </li>
+        </ul>
+    </div>
+</template>
+
+<style lang="scss">
+@import './Menu.scss';
+</style>
+
+<script>
+import Accordion from '../Accordion/Accordion';
+import {mapGetters} from 'vuex';
+
+export default {
+    components: {Accordion},
+    computed  : {...mapGetters({data: 'GET_PAGE_DATA'})}
+};
+</script>

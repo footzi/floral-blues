@@ -23,6 +23,9 @@ module.exports = {
 	 ** Build configuration
 	 */
 	build: {
+		styleResources: {
+			scss: './assets/app.scss'
+		},
 		/*
 		 ** Run ESLint on save
 		 */
@@ -39,7 +42,7 @@ module.exports = {
 	},
 
 	modules: [
-		'@nuxtjs/axios',
+		'@nuxtjs/axios'
 	],
 	watch: ['server/**/*.js'],
 	serverMiddleware: ['~/server/index.js']

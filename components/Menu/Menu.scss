@@ -1,0 +1,30 @@
+.Menu-List {
+    display: flex;
+    justify-content: space-between;
+}
+
+.Menu-Link {
+    @include transition(color, opacity);
+    @include reset-link;
+    font-size: 18px;
+    color: $black;
+
+    @media #{$laptop} {
+        &:hover {
+            opacity: .5;
+
+            &.nuxt-link-exact-active {
+                opacity: 1;
+            }
+        }
+    }
+
+    @media #{$fullhd} {
+        font-size: 25px;
+    }
+
+    &.nuxt-link-exact-active {
+        color: $accent;
+        cursor: default;
+    }
+}
