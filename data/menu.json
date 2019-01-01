@@ -2,26 +2,66 @@
     "data": [{
         "id": "1",
         "name": "Главная",
-        "href": "/home"
+        "href": "/"
     },{
         "id": "2",
         "name": "Обо мне",
-        "href": "/home"
+        "href": "/about"
     },{
         "id": "3",
         "name": "Каталог",
-        "href": "/home"
+        "child": [{
+            "id": "1",
+            "name": "Все",
+            "href": "/catalog"
+        },{
+            "id":"2",
+            "name": "Украшения",
+            "child": [{
+                "id": "1",
+                "name": "Серьги",
+                "href": "/catalog/test"
+            },{
+                "id": "2",
+                "name": "Кольца",
+                "href": "/catalog/test"
+            },{
+                "id": "3",
+                "name": "Кулоны и подвески",
+                "href": "/catalog/test"
+            },{
+                "id": "4",
+                "name": "Броши и заколки",
+                "href": "/catalog/test"
+            },{
+                "id": "5",
+                "name": "Комплекты",
+                "href": "/catalog/test"
+            },{
+                "id": "6",
+                "name": "Разное",
+                "href": "/catalog/test"
+            }] 
+        }, {
+            "id":"3",
+            "name": "Интерьер",
+            "child": [{
+                "id": "1",
+                "name": "Букеты",
+                "href": "/catalog/test"
+            }]
+        }]
     },{
         "id": "4",
         "name": "Доставка/оплата",
-        "href": "/home"
+        "href": "/pay"
     },{
         "id": "5",
         "name": "Обучение",
-        "href": "/home"
+        "href": "/education"
     },{
         "id": "6",
         "name": "Контакты",
-        "href": "/home"
+        "href": "/contacts"
     }]
 }

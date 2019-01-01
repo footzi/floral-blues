@@ -2,7 +2,10 @@
     <div class="Menu">
         <ul class="Menu-List">
             <li class="Menu-Item" v-for="item in data.menu.data" :key="item.id">
-                <nuxt-link class="Menu-Link" :to=item.href>{{item.name}}</nuxt-link>
+                <template v-if="item.child">
+                    <Accordion :props="item"/>
+                </template>
+                <nuxt-link v-else class="Menu-Link" :to=item.href>{{item.name}}</nuxt-link>
             </li>
         </ul>
     </div>
@@ -13,7 +16,11 @@
 </style>
 
 <script>
+import Accordion from '../Accordion/Accordion';
 import {mapGetters} from 'vuex';
 
-export default {computed: {...mapGetters({data: 'GET_PAGE_DATA'})}};
+export default {
+    components: {Accordion},
+    computed  : {...mapGetters({data: 'GET_PAGE_DATA'})}
+};
 </script>

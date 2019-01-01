@@ -14,6 +14,9 @@
                 <PreviewSales />
             </div>
         </div>
+        <div class="Header-Banner">
+            <PictureBanner />
+        </div>
 
     </header>
 </template>
@@ -25,6 +28,7 @@
 <script>
 import Logo from '../Logo/Logo';
 import Menu from '../Menu/Menu';
+import PictureBanner from '../PictureBanner/PictureBanner';
 import PreviewSales from '../PreviewSales/PreviewSales';
 import Social from '../Social/Social';
 
@@ -33,7 +37,8 @@ export default {
         Logo,
         Social,
         Menu,
-        PreviewSales
+        PreviewSales,
+        PictureBanner
     }
 };
 </script>

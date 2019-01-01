@@ -30,13 +30,9 @@
 }
 
 .Header-Content {
-    display: flex;
-    flex-wrap: nowrap;
-    align-items: center;
-
     @media #{$laptop} {
         margin-top: 30px;
-        margin-bottom: 20px;
+        position: relative;
     }
 }
 
@@ -45,14 +41,22 @@
 
     @media #{$laptop} {
         @include suffix(5, 32);
-        @include prefix(4, 32);
+        @include prefix(5, 32);
         width: 100%;
         display: block;
     }
 }
 
 .Header-PreviewSales {
-    position: relative;
-    top: -5px;
-    left: -5px;
+    position: absolute;
+    top: 0;
+    right: 5px;
+
+    @media #{$laptop} {
+        top: -10px;
+    }
+}
+
+.Header-Banner {
+    margin-top: 20px;
 }

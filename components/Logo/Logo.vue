@@ -6,10 +6,10 @@
 
 <style lang='scss'>
     .Logo-Image {
-        max-width: 57px;
+        max-width: 60px;
 
         @media #{$tablet-portrait} {
-            max-width: 77px;
+            max-width: 106px;
         }
 
         @media #{$tablet-landscape} {

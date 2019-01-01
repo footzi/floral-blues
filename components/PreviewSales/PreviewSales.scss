@@ -25,6 +25,26 @@
     position: absolute;
     bottom: -5px;
     right: -5px;
-    font-size: 15px;
+    font-size: 10px;
     color: $accent;
+
+    @media #{$tablet-portrait} {
+        font-size: 15px;
+    }
+}
+
+.PreviewSales-Favorite {
+    width: 19px;
+
+    @media #{$tablet-portrait} {
+        width: 28px;
+    }
+}
+
+.PreviewSales-Cart {
+    width: 23px;
+
+    @media #{$tablet-portrait} {
+        width: 36px;
+    }
 }

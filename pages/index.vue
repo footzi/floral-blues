@@ -1,11 +1,9 @@
 <template>
-	<div class="Index">
-		<Header />
+	<div class="Home">
+		<h1>Главная</h1>
 	</div>
 </template>
 
 <script>
-import Header from '../components/Header/Header';
-
-export default {components: {Header}};
+export default {};
 </script>
