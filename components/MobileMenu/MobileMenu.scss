@@ -1,0 +1,46 @@
+.MobileMenu {
+    @include column(33, 36);
+    @include suffix(3, 36);
+    @include prefix(3, 36);
+    transition: .6s ease-in-out transform;
+    transform: translateX(-100%);
+    width: column(33, 36);
+    position: absolute;
+    overflow: auto;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    background-color: $dark-gray;
+    padding-top: 15px;
+    padding-bottom: 20px;
+
+    @media #{$tablet-portrait} {
+        @include suffix(2, 36);
+        @include prefix(2, 36);
+        width: 50%;
+    }
+
+    &.is-open {
+        transform: translateX(0);
+    }
+}
+
+.MobileMenu-Title {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-family: Astoria;
+    font-size: 20px;
+    color: $accent;
+    text-align: center;
+}
+
+.MobileMenu-Close {
+    position: relative;
+    left: 10px;
+    text-align: right;
+}
+
+.MobileMenu-Social {
+    margin-top: 20px;
+}

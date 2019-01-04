@@ -1,9 +1,5 @@
 .Social-List {
-    display: none;
-
-    @media #{$tablet-landscape} {
-        display: flex;
-    }
+    display: flex;
 }
 
 .Social-Item {

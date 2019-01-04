@@ -3,6 +3,9 @@
         <div class="Header-Social">
             <Social :modify="'Social_theme_header'"/>
         </div>
+        <div class="Header-Burger">
+            <Burger/>
+        </div>
         <div class="Header-Logo">
             <Logo />
         </div>
@@ -26,6 +29,7 @@
 </style>
 
 <script>
+import Burger from '../Burger/Burger';
 import Logo from '../Logo/Logo';
 import Menu from '../Menu/Menu';
 import PictureBanner from '../PictureBanner/PictureBanner';
@@ -34,6 +38,7 @@ import Social from '../Social/Social';
 
 export default {
     components: {
+        Burger,
         Logo,
         Social,
         Menu,
