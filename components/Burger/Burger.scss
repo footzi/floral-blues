@@ -1,0 +1,29 @@
+.Burger {
+    @include transition(opacity);
+    @include reset-button;
+    display: flex;
+    flex-direction: column;
+    opacity: 1;
+
+    &.is-mobilemenu-open {
+        opacity: 0;
+    }
+}
+
+.Burger-Line {
+    width: 20px;
+    height: 3px;
+    border-radius: 5px;
+    background-color: $gray;
+    margin-bottom: 2px;
+
+    @media #{$tablet-portrait} {
+        width: 25px;
+        height: 4px;
+        margin-bottom: 3px;
+    }
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}

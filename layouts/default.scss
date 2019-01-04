@@ -1,0 +1,41 @@
+.Layout {
+    margin-top: 15px;
+
+    @media #{$tablet-landscape} {
+        margin-top: 20px;
+    }
+
+    @media #{$laptop} {
+        margin-top: 35px;
+    }
+
+    @media #{$fullhd} {
+        margin-top: 50px;
+    }
+
+	&.is-mobilemenu-open {
+		overflow: hidden;
+	}
+}
+
+.Layout-Content {
+	@include suffix(2, 36);
+    @include prefix(2, 36);
+    transition: .6s ease-in-out transform;
+
+	&.is-mobilemenu-open {
+        transform: translateX(column(33, 36));
+        
+        @media #{$tablet-portrait} {
+            transform: translateX(50%);
+        }
+
+        @media #{$laptop} {
+            transform: translateX(0);
+        }
+    }
+}
+
+.Layout-MobileMenu {
+	width: 100%;
+}

@@ -28,3 +28,60 @@
         cursor: default;
     }
 }
+
+// Themes
+.Menu_theme_mobile {
+    .Menu-Link {
+        font-size: 16px;
+    }
+
+    .Menu-List {
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+
+    .Menu-Item {
+        padding-top: 15px;
+        padding-bottom: 15px;
+        border-top: 1px solid #b7b7b7;
+        text-transform: uppercase;
+        
+        &:last-child {
+            border-bottom: 1px solid #b7b7b7;
+        }
+    }
+
+    .Accordion-Header {
+        justify-content: space-between;
+    }
+
+    .Accordion-Title {
+        font-size: 16px;
+        text-transform: uppercase;
+    }
+
+    .Accordion-Content {
+        padding-right: 0; 
+    }
+
+    .Accordion-ContentWrap {
+        width: 100%;
+        top: 10px;
+        left: 0;
+        position: relative;
+        background-color: transparent;
+    }
+
+    .Accordion-ContentGroup {
+        border: 0;
+
+        &:last-child {
+            border-bottom: 0;
+            padding-bottom: 0;
+        }
+    }
+
+    .Accordion-Item {
+        margin-top: 15px;
+    }
+}

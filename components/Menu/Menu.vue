@@ -1,5 +1,5 @@
 <template>
-    <div class="Menu">
+    <div :class="['Menu', modify]">
         <ul class="Menu-List">
             <li class="Menu-Item" v-for="item in data.menu.data" :key="item.id">
                 <template v-if="item.child">
@@ -20,6 +20,7 @@ import Accordion from '../Accordion/Accordion';
 import {mapGetters} from 'vuex';
 
 export default {
+    props     : ['modify'],
     components: {Accordion},
     computed  : {...mapGetters({data: 'GET_PAGE_DATA'})}
 };
