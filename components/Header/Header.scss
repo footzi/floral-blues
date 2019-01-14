@@ -1,5 +1,7 @@
 .Header {
     position: relative;
+	@include post(2, 36);
+    @include push(2, 36);
 }
 
 .Header-Social {
