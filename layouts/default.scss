@@ -19,8 +19,6 @@
 }
 
 .Layout-Content {
-	@include suffix(2, 36);
-    @include prefix(2, 36);
     transition: .6s ease-in-out transform;
 
 	&.is-mobilemenu-open {

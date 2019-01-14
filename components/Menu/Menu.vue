@@ -2,7 +2,7 @@
     <div :class="['Menu', modify]">
         <ul class="Menu-List">
             <li class="Menu-Item" v-for="item in data.menu.data" :key="item.id">
-                <template v-if="item.child">
+                <template v-if="item.child && modify !='Menu_theme_footer'">
                     <Accordion :props="item"/>
                 </template>
                 <nuxt-link v-else class="Menu-Link" :to=item.href>{{item.name}}</nuxt-link>

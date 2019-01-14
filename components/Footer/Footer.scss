@@ -1,0 +1,244 @@
+.Footer {
+    @include suffix(2, 36);
+    @include prefix(2, 36);
+    background-color: $footer;
+    position: relative;
+    padding-top: 40px;
+    padding-bottom: 50px;
+
+    @media #{$laptop} {
+        @include row();
+        align-items: flex-start;
+    }
+}
+
+.Footer-Content {
+    @include column(36, 36);
+    @include row();
+    flex-direction: column;
+
+    @media #{$tablet-landscape} {
+        flex-direction: row;
+    }
+
+    @media #{$fullhd} {
+        @include column(25, 32);
+    }
+}
+
+.Footer-VK {
+    display: none;
+
+    @media #{$fullhd} {
+        @include column(6, 32);
+        @include push(1, 32);
+        display: block;
+        
+        img {
+            width: 100%;
+        }
+    }
+}
+
+.Footer-Logo {
+    @include column(14, 32);
+    order: 1;
+    margin: 0 auto;
+    margin-top: 25px;
+
+    @media #{$tablet-portrait} {
+        @include column(6, 32);
+    }
+
+    @media #{$tablet-landscape} {
+        @include column(5, 32);
+        order: 0;
+        margin: 0;
+    }
+
+    @media #{$laptop} {
+        @include column(4, 36);
+        position: absolute;
+    }
+
+    @media #{$fullhd} {
+        @include column(3, 36);
+    }
+
+    .Logo-Image {
+        max-width: 100%;
+        width: 100%;
+    }
+}
+
+.Footer-Menu {
+    display: none;
+
+    @media #{$tablet-landscape} {
+        @include column(18, 32);
+        @include push(2, 32);
+        display: block;
+    }
+
+    @media #{$laptop} {
+        @include column(20, 32);
+        @include push(5, 32);
+    }
+
+    @media #{$fullhd} {
+        @include column(15, 25);
+        @include push(4, 25);
+    }
+}
+
+.Footer-Contacts {
+    color: $white;
+    font-size: 14px;
+    text-align: center;
+
+    @media #{$tablet-landscape} {
+        @include column(7, 32);
+        text-align: right;
+    }
+
+    @media #{$laptop} {
+        @include column(5, 36);
+        @include push(27, 36);
+        position: absolute;
+        width: 100%;
+    }
+
+    @media #{$fullhd} {
+        @include column(3, 36);
+        @include push(22, 36);
+        font-size: 16px;
+    }
+}
+
+.Footer-ContactsLabel {
+    font-size: 16px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+
+    @media #{$tablet-landscape} {
+        margin-bottom: 23px;
+        padding-top: 3px;
+        text-transform: none;
+    }
+
+    @media #{$laptop} {
+        margin-bottom: 40px;
+    }
+
+    @media #{$fullhd} {
+        padding-top: 5px;
+        margin-bottom: 60px;
+        font-size: 18px;
+    }
+}
+
+.Footer-ContactsList {
+    li {
+        margin-bottom: 8px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+
+.Footer-Agreement {
+    color: rgba($white, .6);
+    font-size: 12px;
+    line-height: 16px;
+    margin-top: 40px;
+    text-align: center;
+
+    @media #{$tablet-landscape} {
+        @include column(25, 32);
+        @include post(2, 32);
+        order: 2;
+        margin-top: 50px;
+        text-align: left;
+    }
+
+    @media #{$laptop} {
+        @include column(20, 32);
+        @include push(5, 32);
+        @include post(0);
+        margin-top: 40px;
+        order: 0;
+    }
+
+    @media #{$fullhd} {
+        @include column(15, 25);
+        @include push(4, 25);
+        margin-top: 60px;
+        font-size: 14px;
+        line-height: 18px;
+    }
+}
+
+.Footer-AgreementTitle {
+    font-size: 14px;
+    margin-bottom: 15px;
+    color: $white;
+
+    @media #{$fullhd} {
+        font-size: 16px;
+    }
+}
+
+.Footer-Dev {
+    font-size: 14px;
+    color: $white;
+    margin-top: 30px;
+    text-align: center;
+    
+    @media #{$tablet-landscape} {
+        @include column(25, 32);
+        margin-top: 40px;
+        order: 1;
+        text-align: left;
+    }
+
+    @media #{$laptop} {
+        @include column(15, 32);
+        @include push(5, 32);
+        display: flex;
+        align-items: center;
+        margin-top: 30px;
+        order: 0;
+    }
+
+    @media #{$fullhd} {
+        @include column(10, 25);
+        @include push(4, 25);
+        font-size: 16px;
+    }
+}
+
+.Footer-Social {
+    margin-top: 30px;
+
+    @media #{$tablet-landscape} {
+        @include column(5, 32);
+        order: 3;
+        margin-top: -15px;
+    }
+
+    @media #{$laptop} {
+        @include column(9, 32);
+        @include push(3, 32);
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        order: 0;
+        margin-top: 30px;
+    }
+
+    @media #{$fullhd} {
+        @include column(8, 25);
+        @include push(3, 25);
+    }
+}

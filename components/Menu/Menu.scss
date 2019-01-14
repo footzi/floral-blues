@@ -1,6 +1,17 @@
 .Menu-List {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
+}
+
+.Menu-Item {
+    @media #{$tablet-landscape} {
+        margin-right: 10px;
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
 }
 
 .Menu-Link {
@@ -83,5 +94,41 @@
 
     .Accordion-Item {
         margin-top: 15px;
+    }
+}
+
+.Menu_theme_footer {
+    .Menu-Item {
+        margin-right: 30px;
+        margin-bottom: 20px;
+
+        @media #{$laptop} {
+            margin-right: 0;
+            margin-bottom: 0;
+        }
+    }
+
+    .Menu-List {
+        @media #{$tablet-landscape-only} {
+            justify-content: flex-start;
+        }
+    }
+
+    .Menu-Link {
+        color: $white;
+
+        @media #{$laptop} {
+            &:hover {
+                opacity: .5;
+    
+                &.nuxt-link-exact-active {
+                    opacity: 1;
+                }
+            }
+        }
+
+        &.nuxt-link-exact-active {
+            color: $white;
+        }
     }
 }

@@ -8,7 +8,7 @@
 			<main>
 				<nuxt/>
 			</main>
-			<footer></footer>
+			<Footer />
 		</div>
 	</div>
 </template>
@@ -18,12 +18,14 @@
 </style>
 
 <script>
+import Footer from '../components/Footer/Footer';
 import Header from '../components/Header/Header';
 import {mapGetters} from 'vuex';
 import MobileMenu from '../components/MobileMenu/MobileMenu';
 
 export default {
     components: {
+        Footer,
         Header,
         MobileMenu
     },
