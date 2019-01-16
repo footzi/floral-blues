@@ -1,20 +1,16 @@
 <template>
 	<div class="Home">
-		<h1>Главная</h1>
-		<!-- <div class="test"></div> -->
+		<div class="Home-CatalogPreview">
+			<Catalog :preview="true"/>
+		</div>
 	</div>
 </template>
 
 <style lang='scss'>
-
-.test {
-	background-color: red;
-	width: 100%;
-	height: 1000px;
-}
-
+@import './index.scss';
 </style>
 
 <script>
-export default {};
+import Catalog from '../components/Catalog/Catalog';
+export default {components: {Catalog}};
 </script>

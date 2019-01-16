@@ -1,0 +1,112 @@
+.Catalog-Preview {
+    @media #{$laptop} {
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+
+.Catalog-Item {
+    position: relative;
+    cursor: pointer;
+    box-shadow: 5px 5px 10px rgba($black, .5);
+
+    @media #{$laptop} {
+        @include column(9, 30);
+        @include post(1, 30);
+        margin-bottom: 65px;
+        height: 320px;
+
+        &:last-child {
+            @include post(0);
+        }
+
+        &:hover {
+            .Catalog-ItemContent:before {
+                opacity: 1;
+            }
+
+            .Catalog-ItemHeader {
+                opacity: 1;
+                transform: translateY(0);
+            }
+
+            .Catalog-ItemButton {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    }
+}
+
+.Catalog-ItemImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.Catalog-ItemContent {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    padding-bottom: 60px;
+
+    &:before {
+        @include transition(opacity);
+        content: '';
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0;
+        background-color: rgba($black, .5);
+    }
+}
+
+.Catalog-ItemHeader {
+    @include transition(opacity, transform);
+    color: $white;
+    text-transform: uppercase;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(-100%);
+    margin-bottom: 30px;
+
+    @media #{$laptop} {
+        font-size: 22px;
+    }
+
+    @media #{$fullhd} {
+        font-size: 28px;
+    }
+}
+
+.Catalog-ItemSeparator {
+    margin-top: 30px;
+    width: 11px;
+    height: 11px;
+    border: 1px solid $white;
+    transform: rotate(45deg); 
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.Catalog-ItemCategory {
+    
+}
+
+.Catalog-ItemName {
+    font-weight: 400;
+}
+
+.Catalog-ItemButton {
+    @include transition(opacity, transform);
+    opacity: 0;
+    transform: translateY(100%);
+}

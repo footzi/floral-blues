@@ -1,0 +1,8 @@
+.Home-CatalogPreview {
+    margin-top: 45px;
+
+    @media #{$laptop} {
+        @include post(3, 36);
+        @include push(3, 36)
+    }
+}
