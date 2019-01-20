@@ -10,10 +10,13 @@
         <div class="Catalog-PreviewButton">
             <Button
                 :name="'Каталог'"
-                :modify="'Button_text-size_big'"
                 :to="'/catalog'"
             />
         </div>
+        <p class="Catalog-PreviewDescription">Возможно исполнение <strong>индивидуальных</strong>
+            заказов под  <strong>Ваш образ</strong>.<br>
+            Смело описывайте свои идеи и я постараюсь воплотить их в жизнь!
+        </p>
     </div>
 </template>
 

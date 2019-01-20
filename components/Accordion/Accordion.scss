@@ -27,7 +27,7 @@
 
 .Accordion-Title {
     @include transition(color, opacity);
-    font-size: 18px;
+    font-size: 16px;
     color: $black;
 
     @media #{$laptop} {
@@ -36,8 +36,8 @@
         }
     }
 
-    @media #{$fullhd} {
-        font-size: 25px;
+    @media #{$laptop-wide} {
+        font-size: 18px;
     }
 }
 

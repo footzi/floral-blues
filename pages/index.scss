@@ -2,17 +2,21 @@
     @include post(5, 36);
     @include push(5, 36);
     margin-top: 45px;
+    margin-bottom: 70px;
 
     @media #{$tablet-portrait} {
         @include post(3, 36);
         @include push(3, 36);
+      
     }
 
     @media #{$laptop} {
         margin-top: 60px;
+        margin-bottom: 100px;
     }
 
     @media #{$fullhd} {
         margin-top: 100px;
+        margin-bottom: 150px;
     }
-}
+} 

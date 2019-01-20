@@ -49,6 +49,11 @@
         width: 100%;
         display: block;
     }
+
+    @media #{$laptop-wide} {
+        @include suffix(7, 32);
+        @include prefix(7, 32);
+    }
 }
 
 .Header-PreviewSales {
