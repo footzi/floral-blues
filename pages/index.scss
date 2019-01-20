@@ -1,8 +1,18 @@
 .Home-CatalogPreview {
+    @include post(5, 36);
+    @include push(5, 36);
     margin-top: 45px;
 
-    @media #{$laptop} {
+    @media #{$tablet-portrait} {
         @include post(3, 36);
-        @include push(3, 36)
+        @include push(3, 36);
+    }
+
+    @media #{$laptop} {
+        margin-top: 60px;
+    }
+
+    @media #{$fullhd} {
+        margin-top: 100px;
     }
 }

@@ -1,3 +1,4 @@
+import dataCatalogPreview from '../../../data/catalogpreview.json';
 import dataMenu from '../../../data/menu.json';
 import dataSocial from '../../../data/social.json';
 // import Menu from '../../models/Menu';
@@ -15,8 +16,9 @@ export default {
      */
     async getContent(req, res) {
         const data = {
-            menu  : await this._getMenu(req, res),
-            social: await this._getSocial()
+            menu          : await this._getMenu(req, res),
+            social        : await this._getSocial(),
+            catalogPreview: await this._getCatalogPreview()
         };
 
         res.send(data, status.success);
@@ -45,5 +47,9 @@ export default {
      */
     _getSocial() {
         return dataSocial;
+    },
+
+    _getCatalogPreview() {
+        return dataCatalogPreview;
     }
 };
