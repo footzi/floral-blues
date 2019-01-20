@@ -1,0 +1,77 @@
+.Button {
+    @include transition(background-color, border-color, color);
+    @include reset-button();
+    @include reset-link();
+    font-size: 16px;
+    font-weight: 300;
+    color: $accent;
+    border: 1px solid $accent;
+    border-radius: 24px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-right: 20px;
+    padding-left: 20px;
+    text-align: center;
+
+    @media #{$laptop} {
+        font-size: 18px;
+        padding-right: 40px;
+        padding-left: 40px;
+        padding-top: 7px;
+        padding-bottom: 7px;
+
+        &:hover {
+            background-color: $accent;
+            border-color: $accent;
+            color: $white;
+        }
+    }
+
+    @media #{$fullhd} {
+        font-size: 23px;
+    }
+}
+
+.Button_theme_catalog-preview {
+    color: $white;
+    border: 1px solid $white;
+
+    &:hover {
+        background-color: $accent;
+        border-color: $accent;
+    }
+}
+
+.Button_text-size_big {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-right: 40px;
+    padding-left: 40px;
+    font-size: 16px;
+
+    @media #{$tablet-landscape} {
+        font-size: 18px;
+        padding-left: 55px;
+        padding-right: 55px;
+    }
+
+    @media #{$laptop} {
+        padding-top: 8px;
+        padding-bottom: 8px;
+        padding-left: 60px;
+        padding-right: 60px;
+        font-size: 19px;
+    }
+
+    @media #{$fullhd} {
+        font-size: 25px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 65px;
+        padding-right: 65px;
+    }
+}
+
+// .Button_text-size_large {
+
+// }

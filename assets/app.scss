@@ -1,4 +1,4 @@
-@import './styles/reset.scss';
+// @import './styles/reset.scss';
 @import './styles/fonts.scss';
 @import './styles/breakpoints.scss';
 @import './styles/grid.scss';
@@ -7,4 +7,9 @@
 
 html {
     font-family: 'M.Video';
+    font-weight: 300;
+}
+
+strong {
+    font-weight: 400;
 }

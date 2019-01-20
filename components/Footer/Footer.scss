@@ -122,7 +122,6 @@
 
     @media #{$tablet-landscape} {
         margin-bottom: 23px;
-        padding-top: 3px;
         text-transform: none;
     }
 
@@ -130,8 +129,11 @@
         margin-bottom: 40px;
     }
 
+    @media #{$laptop-wide} {
+        padding-top: 4px;
+    }
+
     @media #{$fullhd} {
-        padding-top: 5px;
         margin-bottom: 60px;
         font-size: 18px;
     }

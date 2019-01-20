@@ -3,7 +3,7 @@ module.exports = {
 	 ** Headers of the page
 	 */
 	head: {
-		title: "floral-blues",
+		title: "Цветочный блюз",
 		meta: [
 			{ charset: "utf-8" },
 			{ name: "viewport", content: "width=device-width, initial-scale=1" },
@@ -13,8 +13,15 @@ module.exports = {
 				content: "floral-blues project"
 			}
 		],
-		link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }]
+		link: [
+			{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }
+			// { rel: 'stylesheet', href: '/styles/reset.css' }
+		]
 	},
+	// If you have problems debugging vue-files in devtools,
+	// set this to false - it *may* help
+	// https://vue-loader.vuejs.org/en/options.html#cachebusting
+	cacheBusting: false,
 	/*
 	 ** Customize the progress bar color
 	 */
@@ -24,8 +31,10 @@ module.exports = {
 	 */
 	build: {
 		styleResources: {
+			css: './assets/styles/reset.css',
 			scss: './assets/app.scss'
 		},
+		extractCSS: true,
 		/*
 		 ** Run ESLint on save
 		 */
