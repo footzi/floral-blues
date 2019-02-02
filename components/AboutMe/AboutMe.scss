@@ -1,0 +1,88 @@
+.AboutMe {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    border-top: 1px solid $black;
+
+    @media #{$tablet-portrait} {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+
+    @media #{$laptop} {
+        padding-top: 80px;
+        padding-bottom: 80px;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    @media #{$fullhd} {
+        @include suffix(1, 34);
+        @include prefix(1, 34);
+        padding-top: 120px;
+        padding-bottom: 120px;
+    }
+}
+
+.AboutMe-Image {
+    object-fit: cover;
+
+    @media #{$fullhd} {
+        @include column(14, 34);
+        @include post(2, 34)
+    }
+}
+
+.AboutMe-Title {
+    font-size: 18px;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: $black;
+    margin-bottom: 40px;
+    text-align: center;
+
+    @media #{$tablet-portrait} {
+        font-size: 20px;
+    }
+
+    @media #{$tablet-landscape} {
+        margin-bottom: 50px;
+    }
+
+    @media #{$laptop} {
+        font-size: 25px;
+        margin-bottom: 60px;
+    }
+
+    @media #{$fullhd} {
+        @include column(18, 34);
+        font-size: 30px;
+        margin-bottom: 70px;
+    }
+}
+
+.AboutMe-Text {
+    font-size: 16px;
+    line-height: 1;
+    margin-bottom: 35px;
+    color: $black;
+
+    @media #{$tablet-portrait} {
+        font-size: 18px;
+    }
+
+    @media #{$tablet-landscape} {
+        font-size: 16px;
+        margin-bottom: 25px;
+    }
+
+    @media #{$laptop} {
+        font-size: 20px;
+        margin-bottom: 30px;
+    }
+
+    @media #{$fullhd} {
+        @include column(18, 34);
+        font-size: 25px;
+        margin-bottom: 70px;
+    }
+}
