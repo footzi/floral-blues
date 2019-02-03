@@ -1,0 +1,42 @@
+@import './breakpoints.scss';
+
+html {
+    font-family: 'M.Video';
+    font-weight: 300;
+}
+
+strong {
+    font-weight: 400;
+}
+
+h2 {
+    font-size: 20px;
+
+    @media #{$tablet-portrait} {
+        font-size: 25px;
+    }
+
+    @media #{$laptop} {
+        font-size: 30px;
+    }
+
+    @media #{$fullhd} {
+        font-size: 40px;
+    }
+}
+
+h3 {
+    font-size: 18px;
+
+    @media #{$tablet-portrait} {
+        font-size: 20px;
+    }
+
+    @media #{$laptop} {
+        font-size: 25px;
+    }
+
+    @media #{$fullhd} {
+        font-size: 30px;
+    }
+}

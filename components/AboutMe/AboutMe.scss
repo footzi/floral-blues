@@ -1,0 +1,97 @@
+.AboutMe {
+    @include suffix(1, 34);
+    @include prefix(1, 34);
+    padding-top: 40px;
+    padding-bottom: 40px;
+    border-top: 1px solid $black;
+    border-bottom: 1px solid $black;
+
+    @media #{$tablet-portrait} {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+
+    @media #{$tablet-landscape} {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+    @media #{$laptop} {
+        padding-top: 70px;
+        padding-bottom: 70px;
+    }
+
+    @media #{$fullhd} {
+        padding-top: 90px;
+        padding-bottom: 90px;
+    }
+}
+
+.AboutMe-Image {
+    display: block;
+    object-fit: cover;
+    margin-top: 40px;
+    margin-bottom: 40px;
+
+    @media #{$tablet-landscape} {
+        @include column(18, 34);
+        @include post(2, 34);
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    @media #{$laptop} {
+        @include column(14, 34);
+        @include post(2, 34);
+    }
+}
+
+.AboutMe-Title {
+    @include column(36, 36);
+    font-weight: 400;
+    text-transform: uppercase;
+    color: $black;
+    margin-bottom: 40px;
+    text-align: center;
+
+    @media #{$tablet-landscape} {
+        margin-bottom: 50px;
+    }
+
+    @media #{$laptop} {
+        margin-bottom: 60px;
+    }
+
+    @media #{$fullhd} {
+        margin-bottom: 70px;
+    }
+}
+
+.AboutMe-Text {
+    margin-bottom: 35px;
+    color: $black;
+    font-weight: 300;
+    text-align: center;
+
+    @media #{$tablet-landscape} {
+        @include column(14, 34);
+        margin-bottom: 25px;
+    }
+
+    @media #{$laptop} {
+        @include column(18, 34);
+    }
+
+    @media #{$laptop} {
+        margin-bottom: 30px;
+    }
+
+    @media #{$fullhd} {
+        margin-bottom: 70px;
+    }
+
+    p {
+        margin-bottom: 35px;
+    }
+}

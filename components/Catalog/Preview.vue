@@ -13,10 +13,12 @@
                 :to="'/catalog'"
             />
         </div>
-        <p class="Catalog-PreviewDescription">Возможно исполнение <strong>индивидуальных</strong>
-            заказов под  <strong>Ваш образ</strong>.<br>
-            Смело описывайте свои идеи и я постараюсь воплотить их в жизнь!
-        </p>
+        <div class="Catalog-PreviewDescription font-size_p1">
+             <p>Возможно исполнение <strong>индивидуальных</strong>
+                заказов под  <strong>Ваш образ</strong>.<br>
+                Смело описывайте свои идеи и я постараюсь воплотить их в жизнь!
+            </p>
+        </div>
     </div>
 </template>
 

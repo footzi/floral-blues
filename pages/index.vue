@@ -3,6 +3,9 @@
 		<div class="Home-CatalogPreview">
 			<Catalog :preview="true"/>
 		</div>
+		<div class="Home-AboutMe">
+			<AboutMe />
+		</div>
 	</div>
 </template>
 
@@ -11,6 +14,12 @@
 </style>
 
 <script>
+import AboutMe from '../components/AboutMe/AboutMe';
 import Catalog from '../components/Catalog/Catalog';
-export default {components: {Catalog}};
+export default {
+    components: {
+        Catalog,
+        AboutMe
+    }
+};
 </script>

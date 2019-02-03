@@ -21,27 +21,23 @@
 
 .Catalog-PreviewDescription {
     margin-top: 50px;
-    font-size: 15px;
     text-align: center;
-    line-height: 1.3;
-    
+
     @media #{$mobile-only} {
         margin-left: -25px;
         margin-right: -25px; 
     }
 
     @media #{$tablet-landscape} {
-        margin-top: 70px; 
+        margin-top: 60px; 
     }
 
     @media #{$laptop} {
         margin-top: 80px;
-        font-size: 25px;
     }
 
     @media #{$fullhd} {
         margin-top: 90px;
-        font-size: 30px;
     }
 }
 
