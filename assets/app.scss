@@ -5,3 +5,7 @@
 @import './styles/mixins.scss';
 @import './styles/colors.scss';
 @import './styles/font-sizes.scss';
+
+.hidden {
+    display: none;
+}
