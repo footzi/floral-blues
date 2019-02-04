@@ -1,0 +1,107 @@
+.Questions {
+    @include suffix(2, 34);
+    @include prefix(2, 34);
+
+    h3 {
+        font-weight: 700;
+        margin-bottom: 25px;
+        text-align: center;
+
+        @media #{$laptop} {
+            min-height: 65px;
+            margin-bottom: 35px;
+        }
+
+        @media #{$fullhd} {
+            min-height: 90px;
+            margin-bottom: 45px;
+        }
+    }
+
+    p {
+        text-align: justify;
+    }
+}
+
+.Questions-List {
+    @media #{$tablet-portrait} {
+        @include row();
+    }
+}
+
+.Questions-Image {
+    width: 190px;
+    height: 190px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 30px;
+    margin-right: auto;
+    margin-left: auto;
+    display: block;
+
+    @media #{$tablet-portrait} {
+        width: 210px;
+        height: 210px;
+    }
+
+    @media #{$laptop} {
+        width: 230px;
+        height: 230px;
+        margin-bottom: 45px;
+    }
+
+    @media #{$fullhd} {
+        width: 300px;
+        height: 300px;
+        margin-bottom: 50px;
+    }
+}
+
+.Questions-Item {
+    @include column(30, 30);
+    margin-bottom: 60px;
+
+    @media #{$tablet-portrait-only} {
+        @include column(14, 30);
+        @include post(2, 30);
+
+        &:nth-child(even) {
+            @include post(0);
+        }
+
+        &:nth-child(3) {
+            display: none;
+        }
+    }
+
+    @media #{$tablet-landscape} {
+        @include column(8, 30);
+        @include post(3, 30);
+
+        &:nth-child(3n) {
+            @include post(0);
+        }
+    }
+
+    @media #{$laptop} {
+        @include column(9, 30);
+        @include post(1.5, 30);
+
+        &:nth-child(3n) {
+            @include post(0);
+        }
+    }
+
+    @media #{$fullhd} {
+        @include column(8, 30);
+        @include post(3, 30);
+
+        &:nth-child(3n) {
+            @include post(0);
+        }
+    }
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}

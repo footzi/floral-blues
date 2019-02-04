@@ -24,3 +24,25 @@
     @include post(1, 36);
     @include push(1, 36);
 }
+
+.Home-Questions {
+    @include post(1, 36);
+    @include push(1, 36);
+    margin-top: 60px;
+    margin-bottom: 60px;
+
+    @media #{tablet-landscape} {
+        margin-top: 80px;
+        margin-bottom: 80px;
+    }
+
+    @media #{laptop} {
+        margin-top: 100px;
+        margin-bottom: 100px;
+    }
+
+    @media #{$fullhd} {
+        margin-top: 150px;
+        margin-bottom: 150px;
+    }
+}

@@ -6,6 +6,9 @@
 		<div class="Home-AboutMe">
 			<AboutMe />
 		</div>
+		<div class="Home-Questions">
+			<Questions />
+		</div>
 	</div>
 </template>
 
@@ -16,10 +19,12 @@
 <script>
 import AboutMe from '../components/AboutMe/AboutMe';
 import Catalog from '../components/Catalog/Catalog';
+import Questions from '../components/Questions/Questions';
 export default {
     components: {
         Catalog,
-        AboutMe
+        AboutMe,
+        Questions
     }
 };
 </script>

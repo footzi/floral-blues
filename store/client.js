@@ -1,3 +1,6 @@
+// eslint-disable-next-line no-process-env
+const domen = process.env.NODE_ENV === 'development' ? 'http://localhost:3030' : 'https://vue-ecomboard.herokuapp.com';
+
 export default {
     state: {
         page      : '',
@@ -16,7 +19,8 @@ export default {
 
     actions: {
         async nuxtServerInit({commit}, {app}) {
-            const data = await app.$axios.$get('api/pages/home');
+            // const page = app.context.route.name;
+            const data = await app.$axios.$get(`${domen}/api/test`);
 
             commit('SET_PAGE_DATA', data);
         },
