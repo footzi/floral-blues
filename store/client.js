@@ -1,5 +1,5 @@
 // eslint-disable-next-line no-process-env
-const domen = process.env.NODE_ENV === 'development' ? 'http://localhost:3030' : 'https://vue-ecomboard.herokuapp.com';
+const domen = process.env.NODE_ENV === 'developmen' ? 'http://localhost:3030' : 'https://vue-ecomboard.herokuapp.com';
 
 export default {
     state: {
