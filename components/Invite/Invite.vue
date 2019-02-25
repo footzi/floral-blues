@@ -1,11 +1,12 @@
 <template>
     <div class="Invite">
-        <!-- <div class="Invite-Parallax">
+        <div class="Invite-Parallax">
             <Parallax
                 :image="'./upload/par1.jpg'"
                 :description="'Приглашаю на мастер-классы'"
+                :scale="1.5"
             />
-        </div> -->
+        </div>
 
         <div class="Invite-Content">
             <div class="Invite-Item">
@@ -16,11 +17,36 @@
 
             <div class="Invite-Item">
                 <p class="font-size_p2 text-upperspace">ПОЧЕМУ ВАМ ПОДХОДЯТ ИМЕННО МОИ КУРСЫ?</p>
-                <ul>
-                    <li>
-                        <p class="font-size_p2">Во-первых, Вам не нужно ничего покупать для прохождения МК, все материалы предоставляются.</p>
+
+                <ul class="Invite-List list-dot">
+                    <li class="Invite-ListItem font-size_p3">
+                        Во-первых, Вам не нужно ничего покупать для прохождения МК,
+                        все материалы предоставляются.
+                    </li>
+                    <li class="Invite-ListItem font-size_p3">
+                        Во-первых, Вам не нужно ничего покупать для прохождения МК,
+                        все материалы предоставляются.
+                    </li>
+                    <li class="Invite-ListItem font-size_p3">
+                        Во-первых, Вам не нужно ничего покупать для прохождения МК,
+                        все материалы предоставляются.
+                    </li>
+                    <li class="Invite-ListItem font-size_p3">
+                        Во-первых, Вам не нужно ничего покупать для прохождения МК,
+                        все материалы предоставляются.
+                    </li>
+                    <li class="Invite-ListItem font-size_p3">
+                        Во-первых, Вам не нужно ничего покупать для прохождения МК,
+                        все материалы предоставляются.
                     </li>
                 </ul>
+
+                <div class="Invite-Button">
+                    <Button
+                        :name="'Узнать подробнее'"
+                        :to="'/education'"
+                    />
+                </div>
             </div>
         </div>
     </div>
@@ -31,8 +57,14 @@
 </style>
 
 <script>
+import Button from '../Button/Button.vue';
 import Parallax from '../Parallax/Parallax.vue';
 
-export default {components: {Parallax}};
+export default {
+    components: {
+        Parallax,
+        Button
+    }
+};
 </script>
 

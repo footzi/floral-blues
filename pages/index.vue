@@ -12,6 +12,7 @@
 		<div class="Home-Invite">
 			<Invite />
 		</div>
+		<div style="padding-top: 500px"></div>
 	</div>
 </template>
 

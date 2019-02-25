@@ -15,44 +15,119 @@
     margin: 0 auto;
     padding-top: 30px;
     padding-bottom: 30px;
-    background-color: red;
+    position: relative;
 
     @media #{$tablet-portrait} {
         @include column(30, 36);
     }
 
     @media #{$tablet-landscape} {
-        @include column(28, 36);
+        @include column(20, 36);
         padding-top: 40px;
         padding-bottom: 40px;
     }
 
     @media #{$fullhd} {
-        @include column(26, 36);
+        @include column(18, 36);
         padding-top: 45px;
         padding-bottom: 45px;
     }
 }
 
 .Invite-Item {
-    padding-top: 10px;
-    padding-bottom: 10px;
+    @include suffix(2, 33);
+    @include prefix(2, 33);
+    padding-top: 20px;
+    padding-bottom: 20px;
     text-align: center;
     border-radius: 5px;
     background-color: rgba($white, .8);
+    margin-bottom: 20px;
 
     @media #{$tablet-portrait} {
-        padding-top: 20px;
-        padding-bottom: 20px;
+        @include suffix(2, 30);
+        @include prefix(2, 30);
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+
+    @media #{$tablet-landscape} {
+        @include suffix(2, 20);
+        @include prefix(2, 20);
+        padding-top: 30px;
+        padding-bottom: 30px;
     }
 
     @media #{$laptop} {
-        padding-bottom: 25px;
-        padding-top: 25px;
+        @include suffix(1, 20);
+        @include prefix(1, 20);
+        padding-bottom: 40px;
+        padding-top: 40px;
+        margin-bottom: 25px;
     }
 
     @media #{$fullhd} {
-        padding-top: 30px;
-        padding-bottom: 30px;
+        @include suffix(1, 18);
+        @include prefix(1, 18);
+        padding-top: 50px;
+        padding-bottom: 50px;
+        margin-bottom: 35px;
+    }
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.Invite-List {
+    margin-top: 20px;
+    text-align: left;
+
+    @media #{$tablet-portrait} {
+        margin-top: 30px;
+    }
+
+    @media #{$laptop} {
+        margin-top: 35px;
+    }
+
+    @media #{$fullhd} {
+        margin-top: 40px;
+    }
+}
+
+.Invite-ListItem {
+    margin-bottom: 10px;
+
+    @media #{$tablet-portrait} {
+        margin-bottom: 20px;
+    }
+
+    @media #{$laptop} {
+        margin-bottom: 25px;
+    }
+
+    @media #{$fullhd} {
+        margin-bottom: 30px;
+    }
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.Invite-Button {
+    margin-top: 20px;
+
+    @media #{$tablet-portrait} {
+        margin-top: 30px;
+    }
+
+    @media #{$laptop} {
+        margin-top: 35px;
+    }
+
+    @media #{$fullhd} {
+        margin-top: 40px;
     }
 }
