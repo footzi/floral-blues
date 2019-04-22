@@ -1,18 +1,20 @@
 <template>
 	<div class="Home">
-		<div class="Home-CatalogPreview">
+		<!-- <section class="Home-CatalogPreview">
 			<Catalog :preview="true"/>
-		</div>
-		<div class="Home-AboutMe">
+		</section>
+		<section class="Home-AboutMe">
 			<AboutMe />
-		</div>
-		<div class="Home-Questions">
+		</section>
+		<section class="Home-Questions">
 			<Questions />
-		</div>
-		<div class="Home-Invite">
+		</section>
+		<section class="Home-Invite">
 			<Invite />
-		</div>
-		<div style="padding-top: 500px"></div>
+		</section> -->
+		<section class="Home-Reviews">
+			<Reviews />
+		</section>
 	</div>
 </template>
 
@@ -25,13 +27,16 @@ import AboutMe from '../components/AboutMe/AboutMe';
 import Catalog from '../components/Catalog/Catalog';
 import Invite from '../components/Invite/Invite';
 import Questions from '../components/Questions/Questions';
+import Reviews from '../components/Reviews/Reviews';
+
 
 export default {
     components: {
         Catalog,
         AboutMe,
         Questions,
-        Invite
+        Invite,
+        Reviews
     }
 };
 </script>

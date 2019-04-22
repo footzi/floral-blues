@@ -1,0 +1,17 @@
+.Slider {
+    position: relative;
+    overflow: hidden;
+}
+
+.Slider-List {
+    //@include transition(transform); 
+    transform: translateZ(0);
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+.Slider-Slide {
+    //flex: 0 0 100%;
+    flex: 0 0 auto;
+    align-self: center;
+}

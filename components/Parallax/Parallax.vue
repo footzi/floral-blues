@@ -52,6 +52,10 @@ export default {
 
     methods: {
         setHeight() {
+            if (!this.scale) {
+                return;
+            }
+
             const height = this.$refs.image.offsetHeight;
             const scaleHeight = height * this.scale;
 

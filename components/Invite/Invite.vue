@@ -4,7 +4,7 @@
             <Parallax
                 :image="'./upload/par1.jpg'"
                 :description="'Приглашаю на мастер-классы'"
-                :scale="1.5"
+                :scale="0"
             />
         </div>
 
