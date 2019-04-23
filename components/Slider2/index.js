@@ -4,4 +4,4 @@ import Prev from './Navigation/Prev.vue';
 import Slide from './Slide.vue';
 import Slider from './Slider.vue';
 
-export {Navigation, Slider, Slide, Prev, Next};
+export {Navigation, Slider, Slide, Next, Prev};

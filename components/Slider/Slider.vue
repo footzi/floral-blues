@@ -147,32 +147,6 @@ export default {
             if (this.infinity && this.isFirstSlide) {
                 this.shownSlides = this.counterSlides;
             }
-        },
-
-        setIsPrevClass(item) {
-            // разница между количеством показанных слайдов и порядковым номером, должна быть больше чем
-            // элементов на 1 слайде
-            const diff = this.shownSlides - item;
-
-            return diff >= this.itemsToSlide;
-        },
-
-        setIsActiveClass(item) {
-            // разница между количеством показанных слайдов и порядковым номером, должна быть меньше чем
-            // элементов на 1 слайде, но больше чем 0;
-            const diff = this.shownSlides - item;
-            const zero = 0;
-
-            return diff < this.itemsToSlide && diff >= zero;
-        },
-
-        setIsNextClass(item) {
-            // разница между количеством показанных слайдов и порядковым номером, должна быть меньше чем
-            // элементов на 1 слайде, и меньше чем 0;
-            const diff = this.shownSlides - item;
-            const zero = 0;
-
-            return diff < this.itemsToSlide && diff < zero;
         }
     }
 };
