@@ -15,6 +15,8 @@
 </style>
 
 <script>
+import { cloneSlide } from './utils';
+
 export default {
     provide() {
         return {$Slider: this};
@@ -28,7 +30,7 @@ export default {
         
         // безконечная прокрутка
         infinity: {
-            default: true,
+            default: false,
             type   : Boolean
         }
     },
@@ -63,37 +65,11 @@ export default {
 
     methods: {
         initSlides() {
-            this.slides = this.$slots.default.filter((item) => {
-                return item.componentOptions;
+            this.slides = this.$slots.default.filter(e => e.componentOptions);
+
+            this.slides.forEach((slide, index) => {
+                slide.componentOptions.propsData.index = index + 1;
             });
-
-            //this.slides = [...this.slides, ...this.slides, ...this.slides];
-            
-            // const t = [...this.slides, ...this.slides, ...this.slides];
-            // console.log(t);
-            //this.slides.push(this.slides[0])
-            const before = [];
-            const after = [];
-
-           
-
-            this.slides.forEach((item) => {
-                before.push(item);
-                after.push(item);
-            });
-
-            const slides = [...before, ...this.slides, ...after];
-
-           console.log(slides);
-           
-
-            slides.forEach((slide, index) => {
-                slide.componentOptions.propsData.index = index + this.itemsToSlide;
-                // console.log(this.slide);
-            });
-
-            this.$slots.default = slides;
-            // this.slides = slides;
         },
 
         setDefaultValues() {

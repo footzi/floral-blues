@@ -42,7 +42,7 @@ export default {
             const start = 0;
 
             // console.log(this.$Slider.indexSlide);
-            console.log(this.index);
+            
 
             return diff < this.$Slider.itemsToSlide && diff >= start;
         },

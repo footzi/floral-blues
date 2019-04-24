@@ -98,6 +98,23 @@
                         <button class="Reviews-NavNext"> Вперед </button>
                     </Next>
                 </Navigation>
+                <Thumbmails slot="slider-addons">
+                    <Thumbmail>
+                        <div>тумба 1</div>
+                    </Thumbmail>
+                    <Thumbmail>
+                        <div>тумба 2</div>
+                    </Thumbmail>
+                    <Thumbmail>
+                        <div>тумба 3</div>
+                    </Thumbmail>
+                     <Thumbmail>
+                        <div>тумба 5</div>
+                    </Thumbmail>
+                     <Thumbmail>
+                        <div>тумба 6</div>
+                    </Thumbmail>
+                </Thumbmails>
             </Slider>
         </div>
     </div>
@@ -119,7 +136,7 @@ export default {
     }
 };*/
 
-import {Navigation, Next, Prev, Slide, Slider} from '../Slider2';
+import {Navigation, Next, Prev, Slide, Slider, Thumbmails, Thumbmail} from '../Slider2';
 
 export default {
     components: {
@@ -127,7 +144,9 @@ export default {
         Slide,
         Navigation,
         Next,
-        Prev
+        Prev,
+        Thumbmails,
+        Thumbmail
     }
 };
 </script>

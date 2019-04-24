@@ -12,7 +12,7 @@
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
     "precommit": "npm run lint",
     "heroku-postbuild": "npm run build",
-    "server": "nodemon --watch server --exec" 
+    "server": "nodemon --watch server --exec"
   },
   "dependencies": {
     "@nuxtjs/axios": "^5.3.6",
